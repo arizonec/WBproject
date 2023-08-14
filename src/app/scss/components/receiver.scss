@@ -1,0 +1,325 @@
+@use '../util/' as *;
+
+.bucket__receiver {
+    background-color: var(--white);
+    padding: 17px 24px 24px 24px;
+    border-radius: 16px;
+    color: var(--light-gray);
+
+    @include breakpoint(tabphone) {
+        width: 100vw;
+        padding: 10px 16px 24px 16px;
+        margin-left: -16px;
+    }
+
+    @include breakpoint(phone) {
+        max-width: 320px;
+        margin-left: -16px;
+        padding: 10px 16px 24px 16px;
+        margin-bottom: 16px;
+    }
+
+    h2 {
+        max-width: 755px;
+        width: 100%;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+        letter-spacing: -1%;
+        margin-right: 10px;
+        margin-bottom: 16px;
+        color: var(--black);
+
+        @include breakpoint(phone) {
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: -0.20px;
+            margin-bottom: 5px;
+        }
+    }
+}
+.receiver__name {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+
+    @include breakpoint(tabphone) {
+        flex-direction: column;
+    }
+
+    @include breakpoint(phone) {
+        flex-direction: column;
+    }
+}
+.receiver__more {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(tabphone) {
+        flex-direction: column;
+    }
+
+    @include breakpoint(phone) {
+        flex-direction: column;
+    }
+}
+.name__name {
+    flex: 1 1 50%;
+    margin-right: 24px;
+
+    @include breakpoint(tabphone) {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    @include breakpoint(phone) {
+        width: 288px;
+        margin: 0 0 10px 0;
+    }
+}
+.name__name-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 2px;
+    visibility: hidden;
+
+    &.active-hat{
+        visibility: visible;
+    }
+}
+.name__name-input {
+    width: 100%;
+    border-bottom: 2px solid var(--light-gray);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+
+    &.error {
+        color: red;
+    }
+}
+.name__name-help {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    visibility: hidden;
+
+    &.error {
+        color: red;
+        visibility: visible;
+    }
+}
+.name__second {
+    flex: 1 1 50%;
+    width: 100%;
+
+
+    @include breakpoint(tabphone) {
+        width: 100%;
+    }
+
+    @include breakpoint(phone) {
+        width: 288px;
+        margin-bottom: 9px;
+    }
+}
+.name__second-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 2px;
+    visibility: hidden;
+
+    &.active-hat{
+        visibility: visible;
+    }
+}
+.name__second-input {
+    width: 100%;
+    border-bottom: 2px solid var(--light-gray);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+    
+    &.error {
+        color: red;
+    }
+}
+.name__second-help {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    visibility: hidden;
+
+    &.error {
+        color: red;
+        visibility: visible;
+    }
+}
+.receiver__more {
+}
+.more {
+}
+.more__email {
+    flex: 1 1 33.3%;
+    margin-right: 24px;
+
+
+    @include breakpoint(tabphone) {
+        width: 100%;
+        margin: 0 0 8px 0;
+    }
+
+    @include breakpoint(phone) {
+        width: 288px;
+        margin: 0 0 8px 0;
+    }
+}
+.more__email-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 2px;
+    visibility: hidden;
+
+    &.active-hat{
+        visibility: visible;
+    }
+}
+.more-email {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 2px solid var(--light-gray);
+    width: 100%;
+    margin-bottom: 7px;
+    
+    &.error {
+        color: red;
+    }
+}
+.more__email-help {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    visibility: hidden;
+
+    &.error {
+        color: red;
+        visibility: visible;
+    }
+}
+.more__tel {
+    flex: 1 1 33.3%;
+    margin-right: 24px;
+
+    &.error {
+        color: red;
+    }
+
+    @include breakpoint(tabphone) {
+        width: 100%;
+        margin: 0 0 8px 0;
+    }
+
+    @include breakpoint(phone) {
+        width: 288px;
+        margin: 0 0 6px 0;
+    }
+}
+.more__tel-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 2px;
+    visibility: hidden;
+
+    &.active-hat{
+        visibility: visible;
+    }
+}
+.more-tel {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 2px solid var(--light-gray);
+    width: 100%;
+    margin-bottom: 7px;
+
+    &.error {
+        color: red;
+    }
+
+    &::placeholder {
+        color: var(--black);
+    }
+}
+.more__tel-help {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    visibility: hidden;
+
+    &.error {
+        color: red;
+        visibility: visible;
+    }
+}
+.more__number {
+    flex: 1 1 33.3%;
+
+    &.error {
+        color: red;
+    }
+
+    @include breakpoint(tabphone) {
+        width: 100%;
+    }
+
+    @include breakpoint(phone) {
+        width: 288px;
+    }
+}
+.more__number-title {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 2px;
+    visibility: hidden;
+
+    &.active-hat{
+        visibility: visible;
+    }
+}
+.more-number {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 2px solid var(--light-gray);
+    width: 100%;
+    margin-bottom: 7px;
+
+    @include breakpoint(phone) {
+        margin-bottom: 3px;
+    }
+
+    &.error {
+        color: red;
+    }
+}
+.more__number-help {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    visibility: hidden;
+
+    &.error {
+        color: red;
+        visibility: visible;
+    }
+}

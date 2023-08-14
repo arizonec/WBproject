@@ -1,0 +1,121 @@
+@use '../util' as *;
+
+body {
+    background: var(--violet);
+    font-family: var(--font-segoe);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    &.overflow{
+        overflow-y: hidden;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 89px;
+        left: 0;
+        border-radius: 25px 25px 0 0;
+        background-color: var(--smoky);
+        width: 100%;
+        height: 24px;
+
+        @include breakpoint(phone) {
+            display: none;
+        }
+    }
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    min-height: 1825px;
+    margin: 1 1 auto;
+
+    @include breakpoint(tabphone) {
+        min-height: 2950.33px;
+    }
+
+    @include breakpoint(phone) {
+        min-height: 2717.33px;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(phone) {
+        min-height: 88px;
+    }
+}
+
+
+.mobile__nav {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: var(--white);
+    width: 320px;
+    height: 56px;
+    padding: 0 13px 0 13px;
+    z-index: 10;
+
+    img {
+        width: 28px;
+        height: 28px;
+
+        @include breakpoint(tablet) {
+            margin-right: 120px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(tabphone) {
+            margin-right: 45px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        @include breakpoint(phone) {
+            margin-right: 38.5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include breakpoint(tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 996px;
+        width: 100%;
+        padding: 0 70px 0 70px;
+    }
+
+    @include breakpoint(phone) {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 320px;
+        padding: 0 13px 0 13px;
+    }
+}
+
